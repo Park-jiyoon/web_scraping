@@ -8,7 +8,10 @@ try:
 except HTTPError as e:
     print(e)
 except URLError as e:
-    print('The suerver could not be found!')
+    print('The server could not be found!')
+else:
+    print('It Worked!')
+    print(bs.nonExistentTag)
 
 bs = BeautifulSoup(html.read(), 'html.parser')
 # bs = BeautifulSoup(html.read(), 'lxml')  # 지저분한 html 코드를 분석할 때
